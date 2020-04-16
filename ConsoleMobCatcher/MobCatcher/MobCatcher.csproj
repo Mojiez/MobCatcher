@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <ApplicationIcon />
+    <Win32Resource />
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="GameData\Characters\Player\" />
+    <Folder Include="GameData\Characters\Npcs\" />
+    <Folder Include="GameData\Items\jewellery\" />
+    <Folder Include="GameData\Items\Armor\" />
+    <Folder Include="GameData\Items\Weapons\" />
+    <Folder Include="GameData\ItemGeneration\" />
+    <Folder Include="GameDialog\" />
+  </ItemGroup>
+
+</Project>
