@@ -9,9 +9,10 @@ namespace MobCatcher.GameData.Characters.Mobs
     {
         public string Name { get; set; }
         public int Level { get; set; }
+        public int Inventory { get; set; }
         public double Xp { get; set; }
         public int Health { get; set; }
-        public int Defence { get; set; }
+        public double Defence { get; set; }
         public int Speed { get; set; }
         public int[] Attack { get; set; } = new int[2];
         public List<PositiveStat> PositiveStats { get; set; } = new List<PositiveStat>();

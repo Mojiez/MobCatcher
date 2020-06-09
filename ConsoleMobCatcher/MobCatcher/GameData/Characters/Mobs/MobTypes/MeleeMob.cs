@@ -7,10 +7,10 @@ namespace MobCatcher.GameData.Characters.Mobs.MobTypes
 {
     class MeleeMob : Mob
     {
-        private MeleeAbilities MeleeAbilities { get; set; }
         public List<MeleeAbilities> Abilities { get; set; }
-        public MeleeMob(string name) : base(name)
+        public MeleeMob(string name, int level) : base(name)
         {
+
 
         }
     }

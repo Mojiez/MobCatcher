@@ -33,12 +33,21 @@ namespace MobCatcher.GameData.Characters.Mobs
             }
             return mob;
         }
+        /// <summary>
+        /// Adds the amount of xp gained from mob killed (Enemy Mob)
+        /// Then checks if its enough for level up with GainLevel
+        /// Returns the mob afterwards
+        /// </summary>
+        /// <param name="mob"></param>
+        /// <param name="enemy"></param>
+        /// <returns></returns>
         public Mob GainExperince(Mob mob, Mob enemy)
         {
             mob.Xp += XpCalculation.GetXpGain(enemy, mob);
             GainLevel(mob);
             return mob;
         }
+        //This method should only be used for generating enemys.. 
         public Mob GenerateRandomEnemyMob(int mobLevel)
         {
             //Missing name Generator
@@ -106,7 +115,5 @@ namespace MobCatcher.GameData.Characters.Mobs
             }
             return negativeStats;
         }
-    
-       
     }
 }

@@ -13,45 +13,61 @@ namespace MobCatcher
         static void Main(string[] args)
         {
             GameMenu menu = new GameMenu();
-            
+            StatCalculation statCalculation = new StatCalculation();
             MobGenerator mobGenerator = new MobGenerator();
             ExperinceCalculation calculation = new ExperinceCalculation();
-            
-            List<StatCheck> statChecks = new List<StatCheck>();
-            for (int i = 0; i < 100; i++)
-            {
-                StatCheck statCheck = new StatCheck();
-                Mob testMob = mobGenerator.GenerateMob("Testie");
-                Mob testEnemy = mobGenerator.GenerateRandomEnemyMob(50);
 
-                mobGenerator.GainExperince(testMob, testEnemy);
-                statCheck.NumberOfNegativeStats = testMob.NegativeStats.Count;
-                statCheck.NumberOfPositiveStats = testMob.PositiveStats.Count;
-                statChecks.Add(statCheck);
-            }
-            int greenCount = 0, yellowCount = 0, redCount = 0;
-            foreach (var item in statChecks)
+            for (int i = 1; i <= 50; i++)
             {
-                if(item.NumberOfPositiveStats >= 3)
-                {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    greenCount++;
-                }
-                else if (item.NumberOfPositiveStats == 2)
-                {
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    yellowCount++;
-                }
-                else
-                {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    redCount++;
-                }
-                Console.WriteLine($"PositiveStats = {item.NumberOfPositiveStats}   NegativeStats = {item.NumberOfNegativeStats}");
-                
+                Mob mob = mobGenerator.GenerateRandomEnemyMob(i);
+                statCalculation.SpeedStatModifier(mob);
+                statCalculation.DefenceStatModifier(mob);
+                statCalculation.HealthStatModifier(mob);
+                statCalculation.AttackModifier(mob);
+                Console.WriteLine("Speed = " + mob.Speed + " Level = " + i);
+                Console.WriteLine("Defence = " + mob.Defence + " Level = " + i);
+                Console.WriteLine("Health = " + mob.Health + " Level = " + i);
+                Console.WriteLine("MinAttack = " + mob.Attack[0] + " MaxAttack = " + mob.Attack[1]);
+                Console.WriteLine();
             }
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine($"Green = {greenCount} Yellow = {yellowCount} Red = {redCount}");
+            #region StatCheck with mob lvl
+            //List<StatCheck> statChecks = new List<StatCheck>();
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    StatCheck statCheck = new StatCheck();
+            //    Mob testMob = mobGenerator.GenerateMob("Testie");
+            //    Mob testEnemy = mobGenerator.GenerateRandomEnemyMob(50);
+
+            //    mobGenerator.GainExperince(testMob, testEnemy);
+            //    statCheck.NumberOfNegativeStats = testMob.NegativeStats.Count;
+            //    statCheck.NumberOfPositiveStats = testMob.PositiveStats.Count;
+            //    statChecks.Add(statCheck);
+            //}
+            //int greenCount = 0, yellowCount = 0, redCount = 0;
+            //foreach (var item in statChecks)
+            //{
+            //    if (item.NumberOfPositiveStats == 4)
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Green;
+            //        greenCount++;
+            //    }
+            //    else if (item.NumberOfPositiveStats >= 2)
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Yellow;
+            //        yellowCount++;
+            //    }
+            //    else
+            //    {
+            //        Console.ForegroundColor = ConsoleColor.Red;
+            //        redCount++;
+            //    }
+            //    Console.WriteLine($"PositiveStats = {item.NumberOfPositiveStats}   NegativeStats = {item.NumberOfNegativeStats}");
+
+            //}
+            //Console.ForegroundColor = ConsoleColor.White;
+            //Console.WriteLine($"Green = {greenCount} Yellow = {yellowCount} Red = {redCount}");
+            #endregion
+
             //int PCount = 0, NCount = 0, EvenCount = 0, GoodCount = 0, MediumCount = 0, BadCount = 0;
             #region Statcheck Test 1
             //for (int i = 0; i < 100; i++)

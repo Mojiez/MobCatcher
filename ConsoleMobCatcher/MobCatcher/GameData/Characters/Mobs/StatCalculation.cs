@@ -7,13 +7,12 @@ namespace MobCatcher.GameData.Characters.Mobs
 {
     class StatCalculation
     {
-        int[] percentchance = { 2, 4, 5, 6, 7, 5 };
+        int[] percentchance = { 4, 4, 3, 3, 2, 1 };
+        private Random random { get; set; } = new Random();
         public StatCheck GetRandomStat(Mob mob)
         {
-            Random random = new Random();
             StatCheck statCheck = new StatCheck();
             int numberofstats = mob.Level / 8;
-            int mobstats = mob.NegativeStats.Count + mob.PositiveStats.Count; 
             for (int i = 0; i < numberofstats; i++)
             {
                 int chanceNumber = random.Next(1, 11);
@@ -28,10 +27,47 @@ namespace MobCatcher.GameData.Characters.Mobs
             }
             return statCheck;
         }
-      
+        public double DefenceStatModifier(Mob mob)
+        {
+            for (int i = 1; i < mob.Level; i++)
+            {
+                double defenceGain = i * 0.05;
+                mob.Defence += defenceGain;
+            }
+            return mob.Defence;
+        }
         public int SpeedStatModifier(Mob mob)
         {
-            return mob.Level;
+            double statgain = 1;
+            for (int i = 1; i < mob.Level; i++)
+            {
+                statgain = 2.94 * mob.Level + mob.Speed;
+            }
+            mob.Speed = Convert.ToInt32(statgain);
+            return mob.Speed;
+        }
+        public int HealthStatModifier(Mob mob)
+        {
+            double healthGain = mob.Health;
+            for (int i = 0; i < mob.Level; i++)
+            {
+                healthGain += healthGain * 0.15;
+            }
+            mob.Health = Convert.ToInt32(healthGain);
+            return mob.Health;
+        }
+
+        public int[] AttackModifier(Mob mob)
+        {
+            double mindamg = 0, maxdamg = 0;
+            for (int i = 0; i < mob.Level; i++)
+            {
+                mindamg += mob.Attack[0] * 0.1;
+                maxdamg += mob.Attack[1] * 0.1;
+            }
+            mob.Attack[0] += Convert.ToInt32(Math.Round(mindamg));
+            mob.Attack[1] += Convert.ToInt32(Math.Round(maxdamg));
+            return mob.Attack;
         }
     }
 }
