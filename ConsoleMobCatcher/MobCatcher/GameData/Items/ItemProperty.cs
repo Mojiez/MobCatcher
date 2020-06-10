@@ -4,9 +4,16 @@ using System.Text;
 
 namespace MobCatcher.GameData.Items
 {
-    class ItemProperty
+    public class ItemProperty
     {
         public string Name { get; set; }
+        public int type { get; set; }
         public List<PrimaryItemStat> Stats { get; set; }
+
+
+        public ItemProperty()
+        {
+           
+        }
     }
 }

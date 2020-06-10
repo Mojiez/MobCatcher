@@ -4,10 +4,11 @@ using System.Text;
 
 namespace MobCatcher.GameData.Items
 {
-    class PrimaryItemStat
+    public class PrimaryItemStat
     {
         public int Health { get; set; }
+        public int Attack { get; set; }
         public int Defence { get; set; }
-        public int Speed { get; set; }
+        public int speed { get; set; }
     }
 }

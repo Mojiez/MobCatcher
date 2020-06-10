@@ -50,17 +50,17 @@ namespace MobCatcher.GameData.Characters.Mobs
         //This method should only be used for generating enemys.. 
         public Mob GenerateRandomEnemyMob(int mobLevel)
         {
-            //Missing name Generator
-            Mob enemy = GenerateMob("Enemy");
+            //No longer missing name Generator
+            Mob enemy = GenerateMob();
             enemy.Level = mobLevel;  
             enemy.Xp = XpCalculation.CalculateAmountOfXpToNextLevel(enemy);
             GenerateMobStats(enemy);
             return enemy;
         }
       
-        public Mob GenerateMob(string name)
+        public Mob GenerateMob()
         {
-            Mob newmob = new Mob(name);
+            Mob newmob = new Mob(GenerateMobName());
             return newmob;
         }
 
@@ -114,6 +114,26 @@ namespace MobCatcher.GameData.Characters.Mobs
 
             }
             return negativeStats;
+        }
+
+        private string GenerateMobName()
+        {
+            Random r = new Random();
+            int length = r.Next(3, 6);
+            string[] consonants = { "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "l", "n", "p", "q", "r", "s", "sh", "zh", "t", "v", "w", "x" };
+            string[] vowels = { "a", "e", "i", "o", "u", "ae", "y" };
+            string Name = string.Empty;
+            Name += consonants[r.Next(consonants.Length)].ToUpper();
+            Name += vowels[r.Next(vowels.Length)];
+            int b = 2; //b tells how many times a new letter has been added. It's 2 right now because the first two letters are already in the name.
+            while (b < length)
+            {
+                Name += consonants[r.Next(consonants.Length)];
+                b++;
+                Name += vowels[r.Next(vowels.Length)];
+                b++;
+            }
+            return Name;
         }
     }
 }

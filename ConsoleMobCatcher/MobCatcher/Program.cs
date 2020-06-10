@@ -1,6 +1,7 @@
 ﻿using MobCatcher.GameData.Characters.Mobs;
 using MobCatcher.GameData.Characters.Mobs.MobTypes;
 using MobCatcher.GameData.Characters.Mobs.StatProperties;
+using MobCatcher.GameData.Items;
 using MobCatcher.GameGraphics;
 using System;
 using System.Collections.Generic;
@@ -15,8 +16,9 @@ namespace MobCatcher
             GameMenu menu = new GameMenu();
             StatCalculation statCalculation = new StatCalculation();
             MobGenerator mobGenerator = new MobGenerator();
+            ItemGenerator itemGenerator = new ItemGenerator();
             ExperinceCalculation calculation = new ExperinceCalculation();
-
+            /*
             for (int i = 1; i <= 50; i++)
             {
                 Mob mob = mobGenerator.GenerateRandomEnemyMob(i);
@@ -30,6 +32,7 @@ namespace MobCatcher
                 Console.WriteLine("MinAttack = " + mob.Attack[0] + " MaxAttack = " + mob.Attack[1]);
                 Console.WriteLine();
             }
+            */
             #region StatCheck with mob lvl
             //List<StatCheck> statChecks = new List<StatCheck>();
             //for (int i = 0; i < 100; i++)
@@ -66,6 +69,24 @@ namespace MobCatcher
             //}
             //Console.ForegroundColor = ConsoleColor.White;
             //Console.WriteLine($"Green = {greenCount} Yellow = {yellowCount} Red = {redCount}");
+            #endregion
+            
+            #region ItemGenerator test
+            for (int i = 0; i < 50; i++)
+            {
+                ItemProperty item = itemGenerator.GenerateRandomItem();
+                Console.WriteLine("Name: " + item.Name);
+                Console.WriteLine("Type: " + item.type);
+                foreach(var stat in item.Stats)
+                {
+                    Console.WriteLine("Health: " + stat.Health);
+                    Console.WriteLine("Attack: " + stat.Attack);
+                    Console.WriteLine("Defence: " + stat.Defence);
+                }
+                Console.WriteLine();
+            }
+
+            Console.ReadKey();
             #endregion
 
             //int PCount = 0, NCount = 0, EvenCount = 0, GoodCount = 0, MediumCount = 0, BadCount = 0;
