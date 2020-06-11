@@ -7,11 +7,11 @@ namespace MobCatcher.GameData.Items
     class WeaponNameGenerator
     {
         ItemGenerator itemGenerator = new ItemGenerator();
-        public string GenerateRandomWeaponName(int type)
+        public string GenerateRandomWeaponName(int itemID)
         {
             string name = string.Empty;
 
-            switch (type)
+            switch (itemID)
             {
                 case 6:
                     name = SwordNameGenerator();
@@ -33,7 +33,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for a sword
+        /// returns a randomly generated string/name for a sword (itemID: 6)
         /// </summary>
         /// <returns></returns>
         public string SwordNameGenerator()
@@ -86,7 +86,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for an Axe
+        /// returns a randomly generated string/name for an Axe (itemID: 7)
         /// </summary>
         /// <returns></returns>
         public string AxeNameGenerator()
@@ -133,7 +133,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for a staff
+        /// returns a randomly generated string/name for a staff (itemID: 8)
         /// </summary>
         /// <returns></returns>
         public string StaffNameGenerator()
@@ -180,7 +180,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for a Dagger
+        /// returns a randomly generated string/name for a Dagger (itemID: 9)
         /// </summary>
         /// <returns></returns>
         public string DaggerNameGenerator()
@@ -228,7 +228,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for a mace/flail
+        /// returns a randomly generated string/name for a mace/flail (itemID: 10)
         /// </summary>
         /// <returns></returns>
         public string MaceAndFlailNameGenerator()

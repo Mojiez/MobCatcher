@@ -18,13 +18,13 @@ namespace MobCatcher.GameData.Items
 
             if (random.Next(2) == 1)
             {
-                item.type = random.Next(1, 6);
-                item.Name = itemNameGenerator.GenerateItemName(item.type);
+                item.ItemID = random.Next(1, 6);
+                item.Name = itemNameGenerator.GenerateItemName(item.ItemID);
             }
             else
             {
-                item.type = random.Next(6, 11);
-                item.Name = weaponnameGenerator.GenerateRandomWeaponName(item.type);
+                item.ItemID = random.Next(6, 11);
+                item.Name = weaponnameGenerator.GenerateRandomWeaponName(item.ItemID);
             }
             
             

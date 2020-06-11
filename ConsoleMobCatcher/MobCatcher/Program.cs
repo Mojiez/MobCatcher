@@ -76,7 +76,7 @@ namespace MobCatcher
             {
                 ItemProperty item = itemGenerator.GenerateRandomItem();
                 Console.WriteLine("Name: " + item.Name);
-                Console.WriteLine("Type: " + item.type);
+                Console.WriteLine("itemID: " + item.ItemID);
                 foreach(var stat in item.Stats)
                 {
                     Console.WriteLine("Health: " + stat.Health);

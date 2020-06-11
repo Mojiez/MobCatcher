@@ -8,10 +8,10 @@ namespace MobCatcher.GameData.Items
     {
         ItemGenerator itemGenenerator = new ItemGenerator();
 
-        public string GenerateItemName(int type)
+        public string GenerateItemName(int itemID)
         {
             string name = string.Empty;
-            switch (type)
+            switch (itemID)
             {
                 case 1:
                     name = GenerateJewelryName();
@@ -33,7 +33,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// Returns a randomly generated string/name for jewelry
+        /// Returns a randomly generated string/name for jewelry (itemID: 1)
         /// </summary>
         /// <returns></returns>
         private string GenerateJewelryName()
@@ -125,7 +125,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for a helmet
+        /// returns a randomly generated string/name for a helmet (itemID: 2)
         /// </summary>
         /// <returns></returns>
         private string GenerateHelmetName()
@@ -202,7 +202,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for a chestpiece
+        /// returns a randomly generated string/name for a chestpiece (itemID: 3)
         /// </summary>
         /// <returns></returns>
         private string GenerateChestName()
@@ -287,7 +287,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for gloves
+        /// returns a randomly generated string/name for gloves (itemID: 4)
         /// </summary>
         /// <returns></returns>
         private string GenerateGloveName()
@@ -364,7 +364,7 @@ namespace MobCatcher.GameData.Items
         }
 
         /// <summary>
-        /// returns a randomly generated string/name for boots
+        /// returns a randomly generated string/name for boots (itemID: 5)
         /// </summary>
         /// <returns></returns>
         private string GenerateBootsName()
