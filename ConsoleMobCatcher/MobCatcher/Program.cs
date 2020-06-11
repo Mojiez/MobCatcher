@@ -70,8 +70,9 @@ namespace MobCatcher
             //Console.ForegroundColor = ConsoleColor.White;
             //Console.WriteLine($"Green = {greenCount} Yellow = {yellowCount} Red = {redCount}");
             #endregion
-            
+
             #region ItemGenerator test
+            /*
             for (int i = 0; i < 50; i++)
             {
                 ItemProperty item = itemGenerator.GenerateRandomItem();
@@ -87,7 +88,9 @@ namespace MobCatcher
             }
 
             Console.ReadKey();
+            */
             #endregion
+
 
             //int PCount = 0, NCount = 0, EvenCount = 0, GoodCount = 0, MediumCount = 0, BadCount = 0;
             #region Statcheck Test 1

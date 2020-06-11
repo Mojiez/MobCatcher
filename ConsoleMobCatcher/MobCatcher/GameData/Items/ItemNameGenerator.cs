@@ -8,6 +8,11 @@ namespace MobCatcher.GameData.Items
     {
         ItemGenerator itemGenenerator = new ItemGenerator();
 
+        /// <summary>
+        /// returns a randomly generated item name
+        /// </summary>
+        /// <param name="itemID"></param>
+        /// <returns></returns>
         public string GenerateItemName(int itemID)
         {
             string name = string.Empty;

@@ -8,7 +8,10 @@ namespace MobCatcher.GameData.Items
 {
     public class ItemGenerator
     {
-        
+        /// <summary>
+        /// randomly generates an item/weapon and gives it name and  itemID
+        /// </summary>
+        /// <returns></returns>
         public ItemProperty GenerateRandomItem()
         {
             ItemNameGenerator itemNameGenerator = new ItemNameGenerator();
@@ -33,11 +36,15 @@ namespace MobCatcher.GameData.Items
             return item;
         }
 
+        /// <summary>
+        /// gives an item/weapon a random list of stats
+        /// </summary>
+        /// <returns></returns>
         private List<PrimaryItemStat> GenerateItemStats()
         {
             List<PrimaryItemStat> temp = new List<PrimaryItemStat>();
             Random random = new Random();
-            temp.Add(new PrimaryItemStat { Attack = random.Next(50, 150), Defence = random.Next(50, 150), Health = random.Next(150, 500)});
+            temp.Add(new PrimaryItemStat { Attack = random.Next(50, 150), Defence = random.Next(50, 150), Health = random.Next(150, 500), speed = random.Next(1,15)});
 
             return temp;
         }

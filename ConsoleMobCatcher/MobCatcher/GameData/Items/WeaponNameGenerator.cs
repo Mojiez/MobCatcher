@@ -7,6 +7,11 @@ namespace MobCatcher.GameData.Items
     class WeaponNameGenerator
     {
         ItemGenerator itemGenerator = new ItemGenerator();
+        /// <summary>
+        /// Returns a randomly generated weapon name
+        /// </summary>
+        /// <param name="itemID"></param>
+        /// <returns></returns>
         public string GenerateRandomWeaponName(int itemID)
         {
             string name = string.Empty;
