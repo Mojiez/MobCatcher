@@ -52,57 +52,9 @@ namespace MobCatcher.GameData.Items
             { "Ambition", "Aura", "Balance", "Bauble", "Beauty", "Belle", "Blessing", "Bliss", "Blossom", "Bond", "Breath", "Bubble", "Charm", "Class", "Clover", "Core", "Crescent", "Crest", "Cross", "Crux", "Desire", "Devotion", "Dewdrop", "Dream", "Drop", "Droplet", "Eye", "Fan", "Favor", "Flame", "Flower", "Focus", "Force", "Gift", "Glamour", "Globe", "Grace", "Heart", "Hope", "Hum", "Hymn", "Image", "Leaf", "Life", "Light", "Lily", "Love", "Lure", "Mark", "Memorial", "Mind", "Moon", "Oath", "Oculus", "Orb", "Palm", "Panther", "Passion", "Petal", "Pledge", "Poem", "Prayer", "Promise", "Prospect", "Rainbow", "Resolve", "Riddle", "Rock", "Root", "Scale", "Seal", "Shield", "Song", "Soul", "Spark", "Spiral", "Spirit", "Star", "Stone", "Sun", "Swan", "Tear", "Teardrop", "Tempest", "Tribute", "Trinket", "Twin", "Twins", "Twirl", "Twist", "Valor", "Vigor", "Vision", "Voice", "Vow", "Whisper", "Will", "Wing", "Wings", "Wish" });
             var nm3 = new List<string>(new string[]
             { "Tiara", "Necklace", "Amulet", "Bracelet", "Ornament", "Pendant", "Ring", "Pin", "Choker", "Anklet", "Brooch", "Necklace", "Amulet", "Bracelet", "Pendant", "Ring" });
-            var nm4a = new List<string>(new string[]
-            { "Âgé", "Éclairé", "Élégant", "Étourdissant", "Abandonné", "Adoré", "Ancien", "Angélique", "Anonyme", "Antique", "Arctique", "Ardent", "Austère", "Aveugle", "Azuré", "Bouclé", "Brillant", "Céleste", "Chéri", "Clair", "Colossal", "Coupable", "Courageux", "Dévoué", "Digne", "Diligent", "Donné", "Doux", "Enchanté", "Enchanteur", "Enjoué", "Exalté", "Exotique", "Félin", "Fantastique", "Fidèle", "Fier", "Généreux", "Gelé", "Gentil", "Glacé", "Gracieux", "Harmonieux", "Heureux", "Honnête", "Humble", "Illustre", "Immaculé", "Immonde", "Impeccable", "Impossible", "Inconnu", "Infini", "Innocent", "Libre", "Loyal", "Lumineux", "Lunaire", "Lustré", "Luxueux", "Mélodieux", "Méritant", "Magnifique", "Majestueux", "Modeste", "Moelleux", "Mystérieux", "Noble", "Pâle", "Paisible", "Paradisiaque", "Parallèle", "Parfait", "Parfumé", "Précieux", "Pur", "Reconnaissant", "Reluisant", "Rose", "Rougissant", "Royal", "Scintillant", "Secret", "Sensationnel", "Serein", "Silencieux", "Sincère", "Sinueux", "Solaire", "Solitaire", "Stupéfiant", "Teinté", "Tendre", "Tentant", "Tranquille", "Vaillant", "Velouté", "Vertueux", "Vibrant", "Vif", "Violet", "Virginal", "Vivant", "au Repos", "d'Émeraude", "d'Agate", "d'Améthyste", "d'Ambre", "d'Ange", "d'Hématite", "d'Obsidienne", "d'Océan", "d'Ombre", "d'Onyx", "de Citrine", "de Corail", "de Cristal", "de Défi", "de Diamant", "de Grenat", "de Jade", "de Jaspe", "de Malachite", "de Nacre", "de Paix", "de Perle", "de Pureté", "de Rubis", "de Saphir", "de Spinelle", "de Zircon" });
-            var nm4b = new List<string>(new string[]
-            { "Âgée", "Éclairée", "Élégante", "Étourdissante", "Abandonnée", "Adorée", "Ancienne", "Angélique", "Anonyme", "Antique", "Arctique", "Ardente", "Austère", "Aveugle", "Azurée", "Bouclée", "Brillante", "Céleste", "Chérie", "Claire", "Colossale", "Coupable", "Courageuse", "Dévouée", "Digne", "Diligente", "Donnée", "Douce", "Enchantée", "Enchanteresse", "Enjouée", "Exaltée", "Exotique", "Féline", "Fantastique", "Fidèle", "Fière", "Généreuse", "Gelée", "Gentile", "Glacée", "Gracieuse", "Harmonieuse", "Heureuse", "Honnête", "Humble", "Illustre", "Immaculée", "Immonde", "Impeccable", "Impossible", "Inconnue", "Infinie", "Innocente", "Libre", "Loyale", "Lumineuse", "Lunaire", "Lustrée", "Luxueuse", "Mélodieuse", "Méritante", "Magnifique", "Majestueuse", "Modeste", "Moelleuse", "Mystérieuse", "Noble", "Pâle", "Paisible", "Paradisiaque", "Parallèle", "Parfaite", "Parfumée", "Précieuse", "Pure", "Reconnaissante", "Reluisante", "Rose", "Rougissante", "Royale", "Scintillante", "Secrète", "Sensationnelle", "Sereine", "Silencieuse", "Sincère", "Sinueuse", "Solaire", "Solitaire", "Stupéfiante", "Teintée", "Tendre", "Tentante", "Tranquille", "Vaillante", "Veloutée", "Vertueuse", "Vibrante", "Vive", "Violette", "Virginale", "Vivante", "au Repos", "d'Émeraude", "d'Agate", "d'Améthyste", "d'Ambre", "d'Ange", "d'Hématite", "d'Obsidienne", "d'Océan", "d'Ombre", "d'Onyx", "de Citrine", "de Corail", "de Cristal", "de Défi", "de Diamant", "de Grenat", "de Jade", "de Jaspe", "de Malachite", "de Nacre", "de Paix", "de Perle", "de Pureté", "de Rubis", "de Saphir", "de Spinelle", "de Zircon" });
-            var nm5 = new List<string>(new string[]
-            { "d'Âme", "d'Écaille", "d'Énergie", "d'Énigme", "d'Éternité", "d'Étincelle", "d'Étoile", "d'Admiration", "d'Aile", "d'Ambition", "d'Atmosphère", "d'Aura", "d'Envie", "d'Idée", "d'Image", "d'Imagination", "d'Intelligence", "d'Origine", "de Bénédiction", "de Babiole", "de Balance", "de Beauté", "de Bravoure", "de Brise", "de Bulle", "de Chanson", "de Classe", "de Croix", "de Détermination", "de Dévotion", "de Donation", "de Félicité", "de Faveur", "de Feuille", "de Fioriture", "de Flamme", "de Fleur", "de Floraison", "de Force", "de Gouttelette", "de Grâce", "de Jumelle", "de Larme", "de Liaison", "de Lueur", "de Lumière", "de Lune", "de Mémoire", "de Marque", "de Marveille", "de Panthère", "de Passion", "de Pierre", "de Poésie", "de Prière", "de Promesse", "de Résolution", "de Rêverie", "de Racine", "de Roche", "de Séduction", "de Songerie", "de Source", "de Sphère", "de Spirale", "de Tempête", "de Terre", "de Trace", "de Valeur", "de Vie", "de Vigueur", "de Vision", "de Vivacité", "de Voix", "de Volonté", "d'Éclat", "d'Écu", "d'Œil", "d'Admirateur", "d'Amour", "d'Arc en Ciel", "d'Attrait", "d'Engagement", "d'Espoir", "d'Esprit", "d'Hommage", "d'Hymne", "d'Orage", "d'Orbe", "de Bibelot", "de Blason", "de Bonheur", "de Cœur", "de Cadeau", "de Centre", "de Cerveau", "de Chant", "de Charme", "de Courage", "de Cygne", "de Désir", "de Dévouement", "de Feu", "de Globe", "de Jumeau", "de Mémorial", "de Murmure", "de Mystère", "de Nœud", "de Pétale", "de Pacte", "de Paume", "de Poème", "de Rêve", "de Sceau", "de Serment", "de Signe", "de Soleil", "de Souffle", "de Souhait", "de Souvenir", "de Trèfle", "de Tribut", "de Vœu" });
-            var nm6 = new List<string>(new string[]
-            { "la Tiare", "l'Amulette", "l'Amulette", "la Bague", "la Bague", "la Broche", "le Diadème", "le Sautoir", "le Sautoir", "le Bracelet", "le Bracelet", "le Collier", "l'Ornament", "le Pendentif", "le Pendentif" });
 
             for (int i = 0; i < 10; i++)
             {
-                var type = random.Next(10);
-                if (type == 1)
-                {
-                    rnd = random.Next(nm6.Count | 0);
-                    rnd2 = random.Next(nm4a.Count | 0);
-                    if (i < 5)
-                    {
-                        if (rnd < 6)
-                        {
-                            names.Add(nm6[rnd] + " " + nm4b[rnd2]);
-                        }
-                        else
-                        {
-                            names.Add(nm6[rnd] + " " + nm4a[rnd2]);
-                        }
-                        ListClass.Splice(nm4a, rnd2, 1);
-                        ListClass.Splice(nm4b, rnd2, 1);
-                    }
-                    else
-                    {
-                        rnd3 = random.Next(nm5.Count | 0);
-                        while (rnd2 > 102)
-                        {
-                            rnd2 = random.Next(nm4a.Count | 0);
-                        }
-                        if (rnd3 < 105)
-                        {
-                            names.Add(nm6[rnd] + " " + nm5[rnd3] + " " + nm4b[rnd2]);
-                        }
-                        else
-                        {
-                            names.Add(nm6[rnd] + " " + nm5[rnd3] + " " + nm4a[rnd2]);
-                        }
-                        ListClass.Splice(nm4a, rnd2, 1);
-                        ListClass.Splice(nm4b, rnd2, 1);
-                        ListClass.Splice(nm5, rnd2, 1);
-                    }
-                }
-                else
-                {
                     rnd = random.Next(nm1.Count | 0);
                     rnd2 = random.Next(nm2.Count | 0);
                     if (i < 5)
@@ -119,7 +71,6 @@ namespace MobCatcher.GameData.Items
                         ListClass.Splice(nm1, rnd, 1);
                         ListClass.Splice(nm2, rnd2, 1);
                     }
-                }
             }
             return names[random.Next(names.Count)].ToString();
         }
@@ -375,7 +326,7 @@ namespace MobCatcher.GameData.Items
             var rnd2 = 0;
             var rnd3 = 0;
             List<string> names = new List<string>();
-            List<String> names4;
+            List<string> names4;
             List<string> names5;
 
             var names1 = new List<string>(new string[] 

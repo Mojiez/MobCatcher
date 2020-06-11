@@ -116,6 +116,10 @@ namespace MobCatcher.GameData.Characters.Mobs
             return negativeStats;
         }
 
+        /// <summary>
+        /// returns a randomly generated string/name
+        /// </summary>
+        /// <returns></returns>
         private string GenerateMobName()
         {
             Random r = new Random();
